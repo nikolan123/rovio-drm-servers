@@ -13,11 +13,11 @@ Find your games name/names and remove the # from all the lines used by it.
 Next put your file onto a web server that doesnt force the client to use https now run 
 
 
-`$filepath = Read-Host "Input file path pls: "
-$file = Get-Item -Path "$filepath"
-$fileSize = $file.Length
-Write-Host "$fileSize bytes."
-Get-FileHash $filepath -Algorithm MD5` 
+`$filepath = Read-Host "Input file path pls: <br>"
+$file = Get-Item -Path "$filepath<br>"
+$fileSize = $file.Length<br>
+Write-Host "$fileSize bytes.<br>"
+Get-FileHash $filepath -Algorithm MD5<br>` 
 
 
 in powershell supplying the path to the file
