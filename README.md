@@ -9,4 +9,6 @@ Works for:
 1 - Accepts anything<br>
 2 - Accepts anything in format XXXX-XXXX-XXXX-XXXX
 
+The EXE files are built using PyInstaller
+
 **by nikolan and tom1212.**
