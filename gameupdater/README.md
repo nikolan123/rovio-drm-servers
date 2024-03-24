@@ -11,13 +11,17 @@ Configuring server.py file:
 
 Find your games name/names and remove the # from all the lines used by it.
 Next put your file onto a web server that doesnt force the client to use https now run 
+
 `$filepath = Read-Host "Input file path pls: "
 $file = Get-Item -Path "$filepath"
 $fileSize = $file.Length
 Write-Host "$fileSize bytes."
-Get-FileHash $filepath -Algorithm MD5` in powershell supplying the path to the file
+Get-FileHash $filepath -Algorithm MD5` 
+
+in powershell supplying the path to the file
 You should see a number with bytes after it and a hash take them to the server.py file and replace yourfilesize with the number before bytes and yourfilemd5 with the hash string and replace all yourfilename's with the name of the file and yourip with the ip of the webserver
 Example below:
+
 `
 [Update]
 Name=Angry Birds
