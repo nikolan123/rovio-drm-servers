@@ -36,7 +36,6 @@ MD5=3D950D76A80A9812E92F124AE5BAB36E
 ServerFileName=Angrybirdsver4.3.0.exe
 FilePath=[APPDIR]Angrybirdsver4.3.0.exe
 Version=4.3.0
-    """
 ```
 
 
