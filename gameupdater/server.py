@@ -100,7 +100,7 @@ app = Flask(__name__)
 # Version=4.5.5
 #     """
 
-# @app.route("/versionCheck/1/AngryBirdsClassic", methods=["GET"])
+# @app.route("/versionCheck/1/AngryBirdsClassic", methods=["GET"]) # replace the /versioncheck url with /install/pc/update/AngryBirds for version classic 2.3.0 and above
 # def updatebirds8():
 #     return f""";aiu;
 
