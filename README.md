@@ -6,5 +6,5 @@ Works for:
 - Angry Birds Star Wars III 1.5.1 (AngryBirdsStarWarsIIInstaller_1.5.1.exe) (1)
 - Angry Birds Rio 2.2.0 (AngryBirdsRioInstaller_2.2.0.exe) (2)
 
-1 - Accepts anything
+1 - Accepts anything<br>
 2 - Accepts anything in format XXXX-XXXX-XXXX-XXXX
