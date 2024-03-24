@@ -8,3 +8,5 @@ Works for:
 
 1 - Accepts anything<br>
 2 - Accepts anything in format XXXX-XXXX-XXXX-XXXX
+
+**by nikolan and tom1212.**
