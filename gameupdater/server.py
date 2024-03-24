@@ -100,5 +100,19 @@ app = Flask(__name__)
 # Version=4.5.5
 #     """
 
+# @app.route("/versionCheck/1/AngryBirdsClassic", methods=["GET"])
+# def updatebirds8():
+#     return f""";aiu;
+
+# [Update]
+# Name=Angry Birds Classic
+# URL=http://yourip/yourfilename
+# Size=yourfilesize
+# MD5=yourfilemd5
+# ServerFileName=yourfilename
+# FilePath=[APPDIR]yourfilename
+# Version=4.5.5
+#     """
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=80)
