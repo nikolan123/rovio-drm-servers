@@ -16,11 +16,10 @@ When the script recieves a request, it always returns that the key is valid. Tha
 |Angry Birds Rio|1.4.0|Windows|AngryBirdsRioInstaller_1.4.0.exe|2,5|
 |Angry Birds Rio|1.4.2|Windows|AngryBirdsRioInstaller_1.4.2.exe|2,5|
 |Angry Birds Rio|1.4.4|Windows|AngryBirdsRioInstaller_1.4.4.exe|2,5|
-
-|Angry Birds Rio|1.7.0|Windows|AngryBirdsRioInstaller_1.7.0.exe|4|
-|Angry Birds Rio|1.8.0|Windows|AngryBirdsRioInstaller_1.8.0.exe|4|
-|Angry Birds Rio|2.0.0|Windows|AngryBirdsRioInstaller_2.0.0.exe|4|
-|Angry Birds Rio|2.1.0|Windows|AngryBirdsRioInstaller_2.1.0.exe|4|
+|Angry Birds Rio|1.7.0|Windows|AngryBirdsRioInstaller_1.7.0.exe|2|
+|Angry Birds Rio|1.8.0|Windows|AngryBirdsRioInstaller_1.8.0.exe|2|
+|Angry Birds Rio|2.0.0|Windows|AngryBirdsRioInstaller_2.0.0.exe|2|
+|Angry Birds Rio|2.1.0|Windows|AngryBirdsRioInstaller_2.1.0.exe|2|
 |Angry Birds Rio|2.2.0|Windows|AngryBirdsRioInstaller_2.2.0.exe|2|
 
 1 - Accepts anything<br>
