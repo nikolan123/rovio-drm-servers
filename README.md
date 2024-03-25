@@ -1,4 +1,6 @@
 # Custom Activation Servers for Old Rovio Games
+> [!WARNING]
+> The EXEs currently don't work, as the game doesn't want to activate when the server is running on the same computer.
 ## How it works:
 The script emulates Rovio's original activation server and redirects any traffic from Rovio's servers[^1] to the host machine[^2].
 When the script recieves a request, it always returns that the key is valid. That tricks the game into activating.
