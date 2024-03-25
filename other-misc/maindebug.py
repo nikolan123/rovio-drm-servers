@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, Response
 
 app = Flask(__name__)
     
@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/drm/consumeKey/', methods=['GET'])
 def drmpc():
     response = f"status=0&type={request.args.get('types')}"
-    return response
+    return Response(response, content_type='text/plain')
 
 
 if __name__ == '__main__':
