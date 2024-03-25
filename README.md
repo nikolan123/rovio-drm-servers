@@ -10,12 +10,13 @@ When the script recieves a request, it always returns that the key is valid. Tha
 |Angry Birds Seasons|4.1.0|Windows|AngryBirdsSeasonsInstaller_4.1.0.exe|1|
 |Angry Birds|4.0.0|Windows|AngryBirdsSeasonsInstaller_4.1.0.exe|1|
 |Angry Birds Star Wars III|1.5.1|Windows|AngryBirdsStarWarsIIInstaller_1.5.1.exe|1|
-|Angry Birds Rio|1.1.0|Windows|AngryBirdsRioInstaller_1.1.0.exe|2,3|
-|Angry Birds Rio|1.2.2|Windows|AngryBirdsRioInstaller_1.2.2.exe|4|
-|Angry Birds Rio|1.3.2|Windows|AngryBirdsRioInstaller_1.3.2.exe|4|
-|Angry Birds Rio|1.4.0|Windows|AngryBirdsRioInstaller_1.4.0.exe|4|
-|Angry Birds Rio|1.4.2|Windows|AngryBirdsRioInstaller_1.4.2.exe|4|
-|Angry Birds Rio|1.4.4|Windows|AngryBirdsRioInstaller_1.4.4.exe|4|
+|Angry Birds Rio|1.1.0|Windows|AngryBirdsRioInstaller_1.1.0.exe|2,3,5|
+|Angry Birds Rio|1.2.2|Windows|AngryBirdsRioInstaller_1.2.2.exe|2,5|
+|Angry Birds Rio|1.3.2|Windows|AngryBirdsRioInstaller_1.3.2.exe|2,5|
+|Angry Birds Rio|1.4.0|Windows|AngryBirdsRioInstaller_1.4.0.exe|2,5|
+|Angry Birds Rio|1.4.2|Windows|AngryBirdsRioInstaller_1.4.2.exe|2,5|
+|Angry Birds Rio|1.4.4|Windows|AngryBirdsRioInstaller_1.4.4.exe|2,5|
+
 |Angry Birds Rio|1.7.0|Windows|AngryBirdsRioInstaller_1.7.0.exe|4|
 |Angry Birds Rio|1.8.0|Windows|AngryBirdsRioInstaller_1.8.0.exe|4|
 |Angry Birds Rio|2.0.0|Windows|AngryBirdsRioInstaller_2.0.0.exe|4|
@@ -26,6 +27,7 @@ When the script recieves a request, it always returns that the key is valid. Tha
 2 - Accepts anything in format XXXX-XXXX-XXXX-XXXX<br>
 3 - The activation server needs to be ran on another device in the network<br>
 4 - Not tested yet
+5 - Uses the old activator (separate window)
 > [!NOTE]
 > The EXE files are built using PyInstaller
 
