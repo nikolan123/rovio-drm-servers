@@ -1,6 +1,4 @@
 # Custom Activation Servers for Old Rovio Games
-> [!WARNING]
-> The EXEs currently don't work, as the game doesn't want to activate when the server is running on the same computer.
 ## How it works:
 The script emulates Rovio's original activation server and redirects any traffic from Rovio's servers[^1] to the host machine[^2].
 When the script recieves a request, it always returns that the key is valid. That tricks the game into activating.
@@ -13,9 +11,11 @@ When the script recieves a request, it always returns that the key is valid. Tha
 |Angry Birds|4.0.0|Windows|AngryBirdsSeasonsInstaller_4.1.0.exe|1|
 |Angry Birds Star Wars III|1.5.1|Windows|AngryBirdsStarWarsIIInstaller_1.5.1.exe|1|
 |Angry Birds Rio|2.2.0|Windows|AngryBirdsRioInstaller_2.2.0.exe|2|
+|Angry Birds Rio|1.1.0|Windows|AngryBirdsRioInstaller_1.1.0.exe|2,3|
 
 1 - Accepts anything<br>
-2 - Accepts anything in format XXXX-XXXX-XXXX-XXXX
+2 - Accepts anything in format XXXX-XXXX-XXXX-XXXX<br>
+3 - The activation server needs to be ran on another device in the network
 > [!NOTE]
 > The EXE files are built using PyInstaller
 
