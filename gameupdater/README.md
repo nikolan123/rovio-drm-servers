@@ -43,3 +43,5 @@ You now should be able to start the server.py file and launch a game and it shou
 
 If you get an error about missing a module about flask run `pip install flask`
 
+# Ready to use server using Archive.org
+The `server-archive.py` file has all links and info set so you can just download and use it without any extra configuration, explanation of how it works is below.
