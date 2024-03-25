@@ -1,7 +1,7 @@
 # Custom Activation Servers for Old Rovio Games
 ## How it works:
 The script emulates Rovio's original activation server and redirects any traffic from Rovio's servers[^1] to the host machine[^2].
-When the script recieves a request, it always returns that the key is valid. That tricks the game into activating
+When the script recieves a request, it always returns that the key is valid. That tricks the game into activating.
 [^1]: Rovio's activation servers are cloud.rovio.com/drm and drm-pc.angrybirdsgame.com
 [^2]: Does this by editing the hosts file which may trigger detections from some anti-virus programs
 ## Tested on:
