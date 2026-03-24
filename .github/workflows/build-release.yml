@@ -29,6 +29,18 @@ jobs:
     - name: Build executable
       run: python build.py
     
+    - name: Delete old release
+      continue-on-error: true
+      run: gh release delete nightly --yes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Delete old tag
+      continue-on-error: true
+      run: git push --delete origin nightly
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
     - name: Upload to Nightly Release
       uses: softprops/action-gh-release@v1
       with:
