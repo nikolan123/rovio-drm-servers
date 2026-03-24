@@ -36,6 +36,6 @@ jobs:
         name: Nightly Build
         files: dist/Rovio CAS.exe
         draft: false
-        prerelease: true
+        prerelease: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
