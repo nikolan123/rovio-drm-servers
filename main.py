@@ -16,5 +16,10 @@ def drmpc():
     return Response(response, content_type='text/plain')
 
 if __name__ == '__main__':
-    print(addrovio("127.0.0.1"))
+    confirm = input("Would you like the script to modify your hosts file to redirect Rovio servers to 127.0.0.1? (y/n): ").lower()
+    if confirm == 'y':
+        print(addrovio("127.0.0.1"))
+    else:
+        print("Will not touch the hosts file.")
+
     app.run(debug=False, host="127.0.0.1", port=80)
