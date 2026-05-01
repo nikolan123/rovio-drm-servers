@@ -11,43 +11,71 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
-    
+    strategy:
+      fail-fast: false
+      matrix:
+        architecture: [x64, x86]
+
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install pyinstaller
-    
-    - name: Build executable
-      run: python build.py
-    
-    - name: Delete old release
-      continue-on-error: true
-      run: gh release delete nightly --yes
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Delete old tag
-      continue-on-error: true
-      run: git push --delete origin nightly
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Upload to Nightly Release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: nightly
-        name: Nightly Build
-        files: dist/Rovio CAS.exe
-        draft: false
-        prerelease: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          architecture: ${{ matrix.architecture }}
+
+      - name: Install uv
+        run: python -m pip install --upgrade uv
+
+      - name: Install dependencies
+        run: uv pip install --system -r requirements.txt pyinstaller
+
+      - name: Build executable
+        run: python build.py
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rovio-cas-${{ matrix.architecture }}
+          path: dist/*.exe
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download x64 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: rovio-cas-x64
+          path: release-assets
+
+      - name: Download x86 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: rovio-cas-x86
+          path: release-assets
+
+      - name: Delete old release
+        continue-on-error: true
+        run: gh release delete nightly --yes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete old tag
+        continue-on-error: true
+        run: git push --delete origin nightly
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload to Nightly Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: nightly
+          name: Nightly Build
+          files: release-assets/*.exe
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
