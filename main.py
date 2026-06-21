@@ -65,6 +65,9 @@ def check_key():
     return Response(response, content_type='text/plain')
 
 if __name__ == '__main__':
+    print("Rovio Activation Server")
+    print("https://github.com/nikolan123/rovio-drm-servers")
+
     confirm = input("Would you like the script to modify your hosts file to redirect Rovio servers to 127.0.0.1? (y/n): ").lower()
     if confirm == 'y':
         print(addrovio("127.0.0.1"))
