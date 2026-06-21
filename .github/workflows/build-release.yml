@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: nightly-release
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: windows-latest
@@ -59,18 +63,12 @@ jobs:
 
       - name: Delete old release
         continue-on-error: true
-        run: gh release delete nightly --yes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Delete old tag
-        continue-on-error: true
-        run: git push --delete origin nightly
+        run: gh release delete nightly --cleanup-tag --yes --repo "$GITHUB_REPOSITORY"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload to Nightly Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: nightly
           name: Nightly Build
