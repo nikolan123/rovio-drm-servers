@@ -6,6 +6,10 @@ The script emulates Rovio's original activation server and redirects any traffic
 
 When the script receives a request, it always returns that the key is valid. That tricks the game into activating.
 
+- [Latest x64 Download](https://github.com/nikolan123/rovio-drm-servers/releases/download/nightly/Rovio.CAS-win-x64.exe)
+- [Latest x86 Download](https://github.com/nikolan123/rovio-drm-servers/releases/download/nightly/Rovio.CAS-win-x86.exe)
+- [Decompilation Info](https://github.com/nikolan123/rovio-drm-servers/tree/main/decompilation)
+
 [^1]: Rovio's activation servers are cloud.rovio.com/drm and drm-pc.angrybirdsgame.com
 
 [^2]: Does this by editing the hosts file, which may trigger detections from some anti-virus programs
